@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+/* body{
+    background-color: #ebebeb;
+} */
 a{
     text-decoration: none;
 }
@@ -12,6 +15,7 @@ header{
     background-color: #0097B2;
     max-width: 1920px;
     margin: 0px auto;
+    position: relative;
 }
 .top-nav{
     display: flex;
@@ -24,6 +28,7 @@ header{
 .top-nav i{
     font-size: 28px;
     cursor: pointer;
+
 }
 .top-nav .logo{
     font-size: 40px;
@@ -42,10 +47,123 @@ height: 50px;
     color: white;
     font-size: 21px;
 }
+
+.side-box {
+    position: absolute;
+    top: 60px;
+left: 0;
+    height: 330px;
+    width: 200px;
+    background-color: #0097B2;
+    display: none;/* Add smooth transition effect */
+text-align: center;
+border-radius: 0px 0px 10px 0px;
+padding: 0px 10px;
+}
+
+.side-box.open {
+    display: block;
+}
+
+.side-box ul li {
+    color: white;
+    margin-top: 40px;
+    padding: 5px 10px;
+    box-shadow: 0px 0px 5px #4144442c;
+    font-size: 21px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease; /* Add transition for smooth effect */
+    list-style: none;
+}
+
+.side-box ul li:hover {
+    background-color: #34515e; /* Change background color on hover */
+}
+
+
+
+.search-box-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    z-index: 1000;
+    margin: 0px auto;
+}
+
+.search-box-popup form {
+    width: 100%;
+    max-width: 1920px; /* Adjust the max-width as needed */
+    background: #fff;
+    padding: 0px  20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    /* margin: 20px auto;  */
+    /* Center the form on the page */
+}
+
+.search-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Spread items evenly */
+    height: 60px;
+}
+
+.search-box-popup i {
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+.search-box-popup input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.search-results {
+    margin-top: 20px;
+}
+
+.search-results p {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .container{
     max-width: 1920px;
     margin: 0px auto;
     padding: 10px;
+
 }
 h1{
     font-size: 30px;
@@ -101,6 +219,21 @@ footer{
     .bottom-nav a{
         font-size: 19px;
     }
+    .search-box-popup form {
+        
+        padding: 0px  10px;
+    }
+    
+    .search-header {
+        height: 50px;
+    }
+
+
+
+
+
+
+
     h1{
         font-size: 23px;
         margin: 10px 0px;
@@ -135,6 +268,7 @@ footer{
     .bottom-nav a{
         font-size: 18px;
     }
+  
 }
 @media (max-width: 320px){
     header{
