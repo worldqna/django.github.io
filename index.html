@@ -17,6 +17,14 @@
     <header>
         <div class="top-nav">
             <div class="side-bar"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></div>
+            <div class="side-box">
+              <ul>
+                <li>home</li>
+                <li>about</li>
+                <li>contact</li>
+                <li>pravacy</li>
+              </ul>
+            </div>
             <div class="logo">WORLD QNA</div>
             <div class="search-bar"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></div>
         </div>
@@ -25,38 +33,58 @@
             <div class="language"><a href="">English&nbsp;&nbsp;<i class="fa-solid fa-caret-down" style="color: #ffffff;"></i></a></div>
         </div>
     </header>
-    
+    <div class="search-box-popup" id="searchBoxPopup">
+      <form action="/home/" method="get">
+          <div class="search-header">
+              <i class="fa fa-arrow-left" aria-hidden="true" onclick="closeSearchBoxPopup()"></i>
+              <input type="text" name="query" placeholder="Enter your search query">
+          </div>
+          <div class="search-results">
+              
+              <!-- Add more search results as needed -->
+          </div>
+      </form>
+  </div>
+  
   <div class="container">
-    <h1>Unlocking the World of Knowledge: Explore the Multilingual Universe of WorldQna.com</h1>
-
-    <h2>Introduction:</h2>
-    <p>Welcome to WorldQna.com, your one-stop destination for an enriching knowledge-sharing experience in multiple languages! We understand the importance of diversity, and that's why we provide a platform that supports English, Italian, Hindi, Arabic, Spanish, Japanese, French, Chinese, Russian, Portuguese, Bengali, German, Tamil, Turkish, Vietnamese, Swahili, Polish, Indonesian, Dutch, Korean, and more.</p>
-
-    <h2>User-Friendly Multilingual Interface:</h2>
-    <p>Navigating WorldQna.com is a breeze with our user-friendly interface. Whether you speak English, Italian, Hindi, or any other language on our extensive list, you can easily switch between languages to make your experience seamless. Our platform embraces linguistic diversity, ensuring that everyone can participate and contribute without encountering any language barriers.</p>
-
-    <h2>No Login Required:</h2>
-    <p>At WorldQna.com, we believe in making knowledge accessible to everyone. That's why we've eliminated the need for user logins. You can simply visit our site, explore the questions and answers, and join the conversation without any hassle. Whether you're a language enthusiast or seeking information, our doors are open to all.</p>
-
-    <h2>Ask and You Shall Receive:</h2>
-    <p>Have a burning question? Don't hesitate to ask! WorldQna.com encourages users to submit their queries, regardless of the topic or language. Our global community is ready to assist, providing answers that cater to your linguistic preferences. From technology and culture to science and travel, there's no limit to the subjects you can explore.</p>
-
-    <h2>WorldQna Team: Your Knowledge Guides:</h2>
-    <p>Our dedicated WorldQna team comprises experts from various fields, ensuring that your questions receive accurate and insightful answers. With diverse expertise and a commitment to fostering a vibrant community, our team strives to create an environment where learning knows no bounds.</p>
-
-    <h2>Engage Without Login:</h2>
-    <p>Not only can you ask questions without logging in, but you can also actively participate in discussions and reply to answers all without the need for an account. This open approach encourages spontaneous interaction, making WorldQna.com a dynamic hub for knowledge exchange.</p>
-
-    <h2>Join the Global Conversation:</h2>
-    <p>WorldQna.com is more than just a Q&amp;A platform; it's a global conversation space where people from different corners of the world come together to share, learn, and connect. Our multilingual community adds a unique flavor to discussions, enriching the experience for every participant.</p>
-
-    <h2>Conclusion:</h2>
-    <p>Embark on a journey of knowledge exploration with WorldQna.com, where language is no barrier to learning. Join us today to ask, answer, and engage in discussions that span the linguistic spectrum. Our commitment to an open and diverse community ensures that you can unlock the world of information in the language that resonates with you. Explore WorldQna.com and be a part of the global conversation!</p>
+   
   </div>
 
   <footer>
    
     <p>&copy; 2024 WorldQna.com. All rights reserved.</p>
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get references to the side-bar and side-box elements
+        var sideBar = document.querySelector('.side-bar');
+        var sideBox = document.querySelector('.side-box');
+
+        // Toggle function
+        function toggleSideBox() {
+            sideBox.classList.toggle('open'); // Add or remove 'open' class
+        }
+
+        // Add click event listener to the side-bar
+        sideBar.addEventListener('click', toggleSideBox);
+    });
+document.addEventListener("DOMContentLoaded", function () {
+            // Get reference to the search-bar
+            var searchBar = document.querySelector('.search-bar');
+
+            // Add click event listener to the search-bar
+            searchBar.addEventListener('click', openSearchBoxPopup);
+        });
+
+        function openSearchBoxPopup() {
+            // Show the search-box-popup
+            document.getElementById('searchBoxPopup').style.display = 'flex';
+        }
+
+        function closeSearchBoxPopup() {
+            // Hide the search-box-popup
+            document.getElementById('searchBoxPopup').style.display = 'none';
+        }
+</script>
 </body>
 </html>
